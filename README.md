@@ -7,3 +7,10 @@ System Design for Tiny Url
 3. Services/APIs
 4. Data Model/ Class Design
 5. Bottlenecks/Scaling
+
+Tech Stack for Simple Version
+
+1. Python
+2. Flask
+3. Docker
+4. MySQL
