@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+   backend:
+       container_name: tinyurl-backend
+       build: .
+       command: python app.py
+       ports:
+           - "5000:5000"
+       volumes:
+           - .:/tinyurl-backend-volume
+   database:
+       container_name: tinyurl-db
+       image: mysql:5.7
+       ports:
+           - "32000:3306"
+       environment:
+           MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+           MYSQL_DATABASE: ${DB_NAME}
+       volumes:
+           - ./db:/tinyurl-db-volume
+
