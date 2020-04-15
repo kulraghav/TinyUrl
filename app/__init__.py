@@ -24,7 +24,23 @@ def create_app():
     def shorten_url():
         original_url = request.form['original_url']
 
+        # TODO:
+        # Validate if original_url is a valid URL
+        # If yes, generate a short URL
+        # Otherwise, throw an error
+
         return original_url
+
+    @app.route('/api/v1/get_url/<string:url>', methods=['GET'])
+    def get_url(url):
+
+        # TODO:
+        # Check if the URL exist
+        # If yes, redirect to original_url
+        # Otherwise, throw an error
+
+        return url
+
 
     return app
 
