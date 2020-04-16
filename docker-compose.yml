@@ -3,11 +3,11 @@ services:
    backend:
        container_name: tinyurl-backend
        build: .
-       command: python app.py
+       command: python manage.py runserver -d
        ports:
            - "5000:5000"
        volumes:
-           - .:/tinyurl-backend-volume
+           - .:/TinyUrlApp
    database:
        container_name: tinyurl-db
        image: mysql:5.7
